@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <div class="logout">
+        <form action="/user/logout" method="POST">
+            <button>Logout</button>
+        </form>
+    </div>
+    <div class="main">
+
+        <h1>User Details</h1>
+
+        <form>
+
+            <label for="fn">First Name:</label>
+            <input type="text" name="firstName" id="fn" value="<%= user.firstName%>"><br><br>
+
+            <label for="ln">Last Name:</label>
+            <input type="text" name="lastName" id="ln" value="<%= user.lastName%>"><br><br>
+
+            <label for="un">User Name:</label>
+            <input type="text" name="userName" id="un" value="<%= user.userName%>"><br><br>
+
+            <label for="pw">Password:</label>
+            <input type="text" name="password" id="pw" value="&#129296;"><br><br>
+
+        </form>
+    </div>
+</body>
+
+</html>

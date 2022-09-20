@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.main {
+    display: flex;
+    padding: 100px;
+    flex-direction: column;
+
+}
+
+.main h1 {
+    margin: auto;
+}
+
+.main form {
+    margin: auto;
+    border: 1px solid black;
+    padding: 5%;
+    padding-bottom: 2%;
+}
+
+.main form label {
+    float: left;
+    padding-right: 10px;
+}
+
+.main form input {
+    float: right;
+}
+
+.main form button {
+    display: flex;
+    padding: auto;
+    margin: auto;
+    border: 1px solid green;
+    border-radius: 2px;
+}
+
+.logout button {
+    float: right;
+    margin: 15px;
+    padding: auto;
+    border: 1px solid green;
+    border-radius: 2px;
+}
