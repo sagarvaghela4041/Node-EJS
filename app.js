@@ -7,10 +7,11 @@ const mongodbSession = require('connect-mongodb-session')(session);
 
 const userRouter = require('./routes/user');
 const User = require('./models/user-model');
+const { MONGO_DB_URL } = require('./constants');
 
 const app = express();
 const sessionStore = new mongodbSession({
-    uri: 'mongodb+srv://SagarVaghela:SagarVaghela@clusterone.r1aubpt.mongodb.net/ejsdemo',
+    uri: MONGO_DB_URL,
     collection: 'sessions'
 });
 
@@ -49,7 +50,7 @@ app.use('/404', (req, res, next) => {
 });
 
 mongoose
-    .connect('mongodb+srv://SagarVaghela:SagarVaghela@clusterone.r1aubpt.mongodb.net/ejsdemo')
+    .connect(MONGO_DB_URL)
     .then(() => {
         app.listen(3000);
     })
