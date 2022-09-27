@@ -20,6 +20,8 @@ router.post('/login', userController.postLoginForm);
 // success page
 router.get('/', auth, userController.getWelcome);
 
+router.get('/thank-you', auth, userController.getThankYou);
+
 // logout
 router.post('/logout', userController.postLogout);
 

@@ -11,6 +11,17 @@
 
 <body>
     <div class="logout">
+        <button id="order-btn">Donate</button>
+        <script src="https://js.stripe.com/v3/"></script>
+        <script>
+            var stripe = Stripe('<%= stipePublishableKey%>');
+            var orderBtn = document.getElementById('order-btn');
+            orderBtn.addEventListener('click', function () {
+                stripe.redirectToCheckout({
+                    sessionId: '<%= sessionId %>'
+                });
+            });
+        </script>
         <form action="/user/logout" method="POST">
             <button>Logout</button>
         </form>

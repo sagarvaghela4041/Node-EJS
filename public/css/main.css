@@ -41,6 +41,11 @@ body {
     border-radius: 2px;
 }
 
+.logout {
+    display: flex;
+    float: right;
+}
+
 .logout button {
     float: right;
     margin: 15px;
